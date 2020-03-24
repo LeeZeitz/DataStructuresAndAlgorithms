@@ -64,7 +64,27 @@ def test_contains():
 
 # Peek should return the first element in the list
 def test_peek():
-    
+    # Setup
+    linked_list = LinkedList()
+
+    # Test peeking an empty list
+    assert linked_list.peek() == None, f'Peek test failed. Should have returned `None`, but returned {linked_list.peek()}'
+
+    # Test peek on list with one element
+    linked_list.insert(9)
+    head = linked_list.peek()
+    assert head == 9, f'Peek test failed. Expected to see `9`, saw {head}'
+    assert head == 9, f'Peek test failed. Expected to see `9`, saw {head}'
+
+    # Test peeking a full list
+    linked_list.insert(1)
+    linked_list.insert(10)
+    linked_list.insert(11)
+    linked_list.insert(12)
+    linked_list.insert(13)
+
+    head = linked_list.peek()
+    assert head == 9, f'Peek test failed. Expected head to be `9`, saw {head}'
 
 
 # Pop should return and remove the first element in the list

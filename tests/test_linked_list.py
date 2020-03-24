@@ -64,7 +64,8 @@ def test_contains():
 
 # Peek should return the first element in the list
 def test_peek():
-    pass
+    
+
 
 # Pop should return and remove the first element in the list
 def test_pop():
